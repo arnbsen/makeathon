@@ -6,6 +6,8 @@ import com.infy.funjourney.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +23,9 @@ public class LocationAPI {
         return this.locationService.findNearestCity(lat, lng);
     }
 
-
+    @PostMapping("/add")
+    public Coordinates add(@RequestBody Coordinates coordinates) {
+    	return this.locationService.addNewPlace(coordinates);
+    }
 
 }

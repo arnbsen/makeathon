@@ -15,4 +15,8 @@ public class LocationService {
     public Coordinates findNearestCity(Double lat, Double lng) {
         return this.coordinateRepository.getPlaceName(lat - 0.0000001, lat + 0.0000001, lng - 0.0000001, lng + 0.0000001);
     }
+
+    public Coordinates addNewPlace(Coordinates coordinates) {
+        return this.coordinateRepository.save(coordinates);
+    }
 }

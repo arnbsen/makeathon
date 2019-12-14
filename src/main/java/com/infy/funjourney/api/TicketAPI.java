@@ -1,5 +1,6 @@
 package com.infy.funjourney.api;
 
+import com.infy.funjourney.model.Guest;
 import com.infy.funjourney.model.Ticket;
 import com.infy.funjourney.service.TicketService;
 
@@ -28,6 +29,10 @@ public class TicketAPI {
         return this.ticketService.getTicket(no);
     }
 
+    @PostMapping("/add/guest")
+    public Guest addGuest(@RequestBody Guest guest) {
+    	return this.ticketService.addGuest(guest);
+    }
     
 
 
