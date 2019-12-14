@@ -9,6 +9,7 @@ import com.infy.funjourney.model.Media;
 import com.infy.funjourney.service.MediaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/media")
 public class MediaAPI {
