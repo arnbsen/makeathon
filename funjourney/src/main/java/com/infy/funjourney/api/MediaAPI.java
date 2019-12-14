@@ -39,6 +39,12 @@ public class MediaAPI {
         return this.mediaService.filterByType(type);
     }
 
+    @GetMapping(value = "/name/{name}")
+    public Media getMediaByName(@PathVariable("name") String name) {
+        return this.mediaService.findMediaByName(name);
+    }
+
+
         
 
 }

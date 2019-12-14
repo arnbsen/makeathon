@@ -17,6 +17,8 @@ public interface MediaRepository extends MongoRepository<Media, String> {
     @Query(value = "{'type': ?0}")
     public List<Media> filterByType(String type);
 
+    Media findByName(String name);
+
     
 
 }

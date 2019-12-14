@@ -25,7 +25,10 @@ public class MediaService {
 
     public List<Media> filterByType(String type) {
         return this.mediaRepository.filterByType(type);
+    }
 
+    public Media findMediaByName(String name) {
+        return this.mediaRepository.findByName(name);
     }
 
 }
